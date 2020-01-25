@@ -3,10 +3,13 @@ const handleWord = (word, from, to) => {
     word = to;
   }
 
+  //Check for puntuation after the word like exlamations, fullstops etc
   if (word.slice(0,-1) === from) {
+    //change word to new word and add punctuation
     word = to + word[word.length -1];
   }
 
+  //return result, whether it was changed or not
   return word;
 }
 
